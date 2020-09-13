@@ -1,4 +1,4 @@
-# install tesseract on WSL(ubuntu18.04  gcc7.5  cmake3.10.2)
+# Installing Tesseract on WSL(ubuntu18.04  gcc7.5  cmake3.10.2)
 
 ## 1 fix dependency
 
@@ -34,7 +34,7 @@
     make -j
     sudo make install
     
- ## 3 use OCR function
+ ## 3 Running tesseract
     
     
     
