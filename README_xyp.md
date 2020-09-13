@@ -42,15 +42,19 @@
 
 ### 1.2 ICU 
     sudo apt-get install libicu-dev -y
-  
+
 ### 1.3 pango  >=1.22.0 
     Pango is a library for laying out and rendering of text, with an emphasis on internationalization
-    wget http://ftp.gnome.org/pub/gnome/sources/pango/1.28/pango-1.28.1.tar.gz  // If download fail, get from website manually. Newest version build by meson.
-    tar -xzvf pango-1.28.1.tar.gz
-    cd pango-1.28.1/
-    ./configure --prefix=/usr
-    make -j
-    sudo make install
+    
+    1) apt-get, havn't try
+        sudo apt-get install libpango1.0-dev
+    2) source build, successfully !!
+        wget http://ftp.gnome.org/pub/gnome/sources/pango/1.28/pango-1.28.1.tar.gz  // If download fail, get from website manually. Newest version build by meson.
+        tar -xzvf pango-1.28.1.tar.gz
+        cd pango-1.28.1/
+        ./configure --prefix=/usr
+        make -j
+        sudo make install
     
 ### 1.4 cairo   
     sudo apt-get install libcairo2-dev -y
@@ -132,11 +136,13 @@
 ### 3.2  recognice PNG in Chinese
 
 #### 3.2.1 train Chinese tessdata 
-        1) Have to train tesseract 4 with my box files #2858
+        1) Have to train tesseract 4 with my box files #2858    
             https://github.com/tesseract-ocr/tesseract/issues/2858
         2) Tesseract4.0训练字库 OCR 提高识别率必备(超详情)
            https://www.jianshu.com/p/c8ba23ec672a
-        
+        3) Tesseract 4.0 LSTM训练超详细教程 
+            https://zhuanlan.zhihu.com/p/58366201
+            
         root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# find /usr -name lstmtraining
             /usr/bin/lstmtraining
             /usr/local/bin/lstmtraining
