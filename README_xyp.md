@@ -133,7 +133,12 @@
 
 #### 3.2.1 train Chinese tessdata 
         Have to train tesseract 4 with my box files #2858
-        https://github.com/tesseract-ocr/tesseract/issues/2858
+            https://github.com/tesseract-ocr/tesseract/issues/2858
+        
+        root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# find /usr -name lstmtraining
+            /usr/bin/lstmtraining
+            /usr/local/bin/lstmtraining
+
         
 #### 3.2.2 test      
         snapshot in.PNG from https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%95%85%E5%AE%AB/345415
