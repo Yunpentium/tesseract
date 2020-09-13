@@ -68,7 +68,7 @@
     
 ## 3 Running tesseract  
  
-### 3.1  work well for PNG in English  
+### 3.1  command line  
     Default image format for firstly tesseract version was .tif or .tiff. in new version you should install following format package (libgif libjpeg libpng libtiff zlib). Leptonica use this pakages for read images and tesseract use leptonica for analyse images.
     
     root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# tesseract -v
@@ -79,14 +79,26 @@
          Found AVX
          Found FMA
          Found SSE
-    root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# tesseract -v
-    tesseract 5.0.0-alpha
-     leptonica-1.81.0
-      libgif 5.1.4 : libjpeg 9d : libpng 1.6.37 : libtiff 4.1.0 : zlib 1.2.11
-     Found AVX2
-     Found AVX
-     Found FMA
-     Found SSE
+     root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# tesseract --list-langs
+        List of available languages (2):
+        eng
+        osd
+     root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# tesseract --help
+        Usage:
+          tesseract --help | --help-extra | --version
+          tesseract --list-langs
+          tesseract imagename outputbase [options...] [configfile...]
+
+        OCR options:
+          -l LANG[+LANG]        Specify language(s) used for OCR.
+        NOTE: These options must occur before any configfile.
+
+        Single options:
+          --help                Show this help message.
+          --help-extra          Show extra help for advanced users.
+          --version             Show version information.
+          --list-langs          List available languages for tesseract engine.
+
 
 ### 3.2  work well for PNG in English
         snapshot in.PNG from https://en.wikipedia.org/wiki/Main_Page
