@@ -3,10 +3,40 @@
 ## 1 fix dependency
 
 ### 1.1 leptonica
+    Leptonica它依赖于开源的zlib、libjpeg、libpng、libtiff、giflib的.so, 如果缺少一定要安装上，apt-get或源码
+        echo y | sudo apt-get install zlib1g-dev
+        echo y | sudo apt-get install libpng-dev
+        echo y | sudo apt-get install libgif-dev
+        echo y | sudo apt-get install libjpeg-dev
+        echo y | sudo apt-get install libtiff-dev
+        
     git clone -b master https://github.com/danbloomberg/leptonica/releases
     mkdir build
     cd build
-    cmake .. -DBUILD_SHARED_LIBS=ON   //Fix permission issue, https://github.com/DanBloomberg/leptonica/issues/536
+    cmake .. -DBUILD_SHARED_LIBS=ON   //Fix permission issue, see https://github.com/DanBloomberg/leptonica/issues/536
+        root@A191130469:/mnt/d/project/other/leptonica/build# cmake .. -DBUILD_SHARED_LIBS=ON
+        -- Found PNG: /usr/local/lib/libpng.so (found version "1.6.37")
+        -- Can not find: /webp/mux.h
+        CMAKE_BUILD_TYPE = Release
+        --
+        -- General configuration for Leptonica 1.81.0
+        -- --------------------------------------------------------
+        -- Build type: Release
+        -- Compiler: GNU
+        -- C compiler options:
+        -- Linker options:
+        -- Install directory: /usr/local
+        --
+        -- Build with sw [SW_BUILD]: OFF
+        -- Build utility programs [BUILD_PROG]: OFF
+        -- Used ZLIB library: /usr/lib/x86_64-linux-gnu/libz.so
+        -- Used PNG library:  /usr/local/lib/libpng.so;/usr/lib/x86_64-linux-gnu/libz.so
+        -- Used JPEG library: /usr/local/lib/libjpeg.so
+        -- Used JP2K library:
+        -- Used TIFF library: /usr/local/lib/libtiff.so
+        -- Used GIF library:  /usr/lib/x86_64-linux-gnu/libgif.so
+        -- Used WEBP library:
+        -- --------------------------------------------------------
     make -j
     sudo make install
 
@@ -57,31 +87,6 @@
      Found AVX
      Found FMA
      Found SSE
-
-    Leptonica它依赖于开源的zlib、libjpeg、libpng、libtiff、giflib的源代码。版本分别是：
-        root@A191130469:/mnt/d/project/other/leptonica/build# cmake .. -DBUILD_SHARED_LIBS=ON
-        -- Found PNG: /usr/local/lib/libpng.so (found version "1.6.37")
-        -- Can not find: /webp/mux.h
-        CMAKE_BUILD_TYPE = Release
-        --
-        -- General configuration for Leptonica 1.81.0
-        -- --------------------------------------------------------
-        -- Build type: Release
-        -- Compiler: GNU
-        -- C compiler options:
-        -- Linker options:
-        -- Install directory: /usr/local
-        --
-        -- Build with sw [SW_BUILD]: OFF
-        -- Build utility programs [BUILD_PROG]: OFF
-        -- Used ZLIB library: /usr/lib/x86_64-linux-gnu/libz.so
-        -- Used PNG library:  /usr/local/lib/libpng.so;/usr/lib/x86_64-linux-gnu/libz.so
-        -- Used JPEG library: /usr/local/lib/libjpeg.so
-        -- Used JP2K library:
-        -- Used TIFF library: /usr/local/lib/libtiff.so
-        -- Used GIF library:  /usr/lib/x86_64-linux-gnu/libgif.so
-        -- Used WEBP library:
-        -- --------------------------------------------------------
 
 ### 3.2  work well for PNG in English
         snapshot in.PNG from https://en.wikipedia.org/wiki/Main_Page
