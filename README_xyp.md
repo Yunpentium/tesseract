@@ -104,7 +104,7 @@
 ### 3.2  work well for PNG in English
         snapshot in.PNG from https://en.wikipedia.org/wiki/Main_Page
         
-        root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# tesseract in.PNG out
+        root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# tesseract eng_wiki.PNG out
         Tesseract Open Source OCR Engine v5.0.0-alpha with Leptonica
         root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# cat out
         cat: out: No such file or directory
@@ -128,4 +128,15 @@
 
         Recently featured: Spotted hyena + Masih Alinejad + Nicholas Lanier
         Archive ¢ More featured pictures
+        
+### 3.2  recognice PNG in Chinese
 
+#### 3.2.1 train Chinese tessdata 
+        Have to train tesseract 4 with my box files #2858
+        https://github.com/tesseract-ocr/tesseract/issues/2858
+        
+#### 3.2.2 test      
+        snapshot in.PNG from https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%95%85%E5%AE%AB/345415
+        tesseract chi_gugong.jpg - -l chi_sim --psm 6 --oem 1
+
+### 3.2  recognice PNG in multi-language
