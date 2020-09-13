@@ -68,7 +68,7 @@
     
 ## 3 Running tesseract  
  
-### 3.2  work well for PNG in English  
+### 3.1  work well for PNG in English  
     Default image format for firstly tesseract version was .tif or .tiff. in new version you should install following format package (libgif libjpeg libpng libtiff zlib). Leptonica use this pakages for read images and tesseract use leptonica for analyse images.
     
     root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# tesseract -v
