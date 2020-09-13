@@ -1,4 +1,4 @@
-# Installing Tesseract on WSL(ubuntu18.04  gcc7.5  cmake3.10.2)
+# Tesseract on WSL(ubuntu18.04  gcc7.5  cmake3.10.2)
 
 ## 1 fix dependency
 
