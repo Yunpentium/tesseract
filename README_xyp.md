@@ -132,8 +132,10 @@
 ### 3.2  recognice PNG in Chinese
 
 #### 3.2.1 train Chinese tessdata 
-        Have to train tesseract 4 with my box files #2858
+        1) Have to train tesseract 4 with my box files #2858
             https://github.com/tesseract-ocr/tesseract/issues/2858
+        2) Tesseract4.0训练字库 OCR 提高识别率必备(超详情)
+           https://www.jianshu.com/p/c8ba23ec672a
         
         root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# find /usr -name lstmtraining
             /usr/bin/lstmtraining
