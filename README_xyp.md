@@ -65,6 +65,7 @@
     sudo make install   //    /usr/local/lib/libtesseract.so -> libtesseract.so.5.0.0
                         //    /usr/local/lib/libtesseract.so.5.0.0
     sudo ldconfig
+    export TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
     
 ## 3 Running tesseract  
  
