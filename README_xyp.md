@@ -136,20 +136,25 @@
 ### 3.2  recognice PNG in Chinese
 
 #### 3.2.1 train Chinese tessdata 
-        1) Have to train tesseract 4 with my box files #2858    
-            https://github.com/tesseract-ocr/tesseract/issues/2858
-        2) Tesseract4.0训练字库 OCR 提高识别率必备(超详情)
+        使用tesseract的中文语言包“chi_sim”，https://github.com/tesseract-ocr/tessdata
+        
+        但是它对中文手写字体或者环境比较复杂的图片，识别正确率不高，因此需要针对特定情况用自己的样本进行训练，提高识别率，通过训练，也可以形成自己的语言库。
+        其它：
+        1) Tesseract4.0训练字库 OCR 提高识别率必备(超详情)
            https://www.jianshu.com/p/c8ba23ec672a
+        2) Have to train tesseract 4 with my box files #2858    
+            https://github.com/tesseract-ocr/tesseract/issues/2858
         3) Tesseract 4.0 LSTM训练超详细教程 
             https://zhuanlan.zhihu.com/p/58366201
+            
             
         root@A191130469:/mnt/d/project/code/cpp_clion/demo/code/src/oj/res# find /usr -name lstmtraining
             /usr/bin/lstmtraining
             /usr/local/bin/lstmtraining
 
         
-#### 3.2.2 test      
-        snapshot in.PNG from https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%95%85%E5%AE%AB/345415
-        tesseract chi_gugong.jpg - -l chi_sim --psm 6 --oem 1
+#### 3.2.2 work ok for PNG in Chinese      
+        snapshot in_chi.PNG from https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%95%85%E5%AE%AB/345415
+        tesseract in_chi.jpg out_chi -l chi_sim --psm 6 --oem 1
 
 ### 3.2  recognice PNG in multi-language
